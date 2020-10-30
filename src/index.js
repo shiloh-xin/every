@@ -1,17 +1,22 @@
-import React from 'react';
+// 引入
+import React from 'react'; //可以不写，建议留着
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
+// 配置react-redux
+import { Provider } from 'react-redux';
+import store from './Store/index';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+// 导入根组件
+import App from './App22';
+
+// 渲染视图
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    // 共享store给全局的组件
+    <Provider store={store}>
+        <Router>
+            <App></App>
+        </Router>
+    </Provider>,
+    document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
