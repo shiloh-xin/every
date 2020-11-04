@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import querystring from 'querystring';
+import { Redirect } from 'react-router-dom';
 
 class Cmp12 extends Component {
     constructor(props) {
@@ -18,6 +19,7 @@ class Cmp12 extends Component {
         return (
             <div>
                 <h1>新闻页面</h1>
+                <Redirect from="/news" to="/about"></Redirect>
             </div>
         );
     }

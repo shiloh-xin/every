@@ -8,7 +8,7 @@ import store from './Store/index';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 // 导入根组件
-import App from './App22';
+import App from './TodoList/Index';
 
 // 渲染视图
 ReactDOM.render(

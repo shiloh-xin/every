@@ -1,0 +1,29 @@
+/* 入场时的动画 */
+.alert-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+/* 入场中的动画 */
+.alert-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+/* 出场时的动画 */
+.alert-exit {
+    opacity: 1;
+}
+
+/* 出场中的动画 */
+.alert-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+}
+
+/* 出场完成动画 */
+.alert-exit-done {
+    display: none;
+}
